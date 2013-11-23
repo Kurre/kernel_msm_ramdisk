@@ -495,7 +495,6 @@ service ril-daemon /system/bin/rild
     socket cutback stream 660 media radio
     user root
     group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log net_raw diag
-
 service surfaceflinger /system/bin/surfaceflinger
     class main
     user system
