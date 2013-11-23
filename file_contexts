@@ -254,3 +254,10 @@
 
 /system/bin/hci_qcomm_init         u:object_r:hci_exec:s0
 /system/bin/bdAddrLoader           u:object_r:hci_exec:s0
+#line 1 "vendor/slim/sepolicy/file_contexts"
+#############################
+# performance-related sysfs files
+/sys/kernel/mm/ksm(/.*)?       --          u:object_r:sysfs_writable:s0
+/sys/devices/system/cpu.*/cpufreq(/.*)? --  u:object_r:sysfs_writable:s0
+/sys/block/mmcblk0/queue/scheduler  --    u:object_r:sysfs_writable:s0
+
